@@ -2388,7 +2388,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test youtube_validate if user dont have channel or live permission
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         channel.return_value = {
             'channel': False,
             'livestream': False,
@@ -2432,7 +2432,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test youtube_validate if credentials.token is wrong
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2463,7 +2463,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test update_livebroadcast normal process
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2499,7 +2499,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test update_livebroadcast if credential is wrong
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2542,7 +2542,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
             'duration': '40',
             'broadcast_id': '09876'
         }
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2590,7 +2590,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test create_livebroadcast normal process
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2659,7 +2659,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
             'duration': '40',
             'restricted_access': 'false'
         }
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2694,7 +2694,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test create_livebroadcast if fail in create live on youtube  
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2725,7 +2725,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test create_livebroadcast if fail update status livestream in zoom meeting 
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
@@ -2782,7 +2782,7 @@ class TestEolYouTubeAPI(UrlResetMixin, ModuleStoreTestCase):
         """
             Test create_livebroadcast when user have over 21 livebroadcast for one meeting
         """
-        new_expiry = dt.now() + datetime.timedelta(seconds=3600)
+        new_expiry = dt.utcnow() + datetime.timedelta(seconds=3600)
         credentials = {
             'token': "this-is-a-token",
             'refresh_token': "1//xEoDL4iW3cxlI7yDbSRFYNG01kVKM2C-259HOF2aQbI",
